@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</head>
+    <body>
+    <h1>Миссия Колонизация Марса</h1>
+    <div class="alert alert-success" role="alert">
+        <h4>И на Марсе будут яблони цвести!</h4>
+    </div>
+    {% if page == 1 %}
+    <div class="alert alert-info" role="alert">
+      <h4 align="center">Инженерные тренажеры</h4>
+    </div>
+    <img src="{{url_for('static', filename='img/инженерные тренажёры.jpg')}}"
+               alt="здесь должна была быть картинка, но не нашлась">
+    {% elif page == 2 %}
+    <div class="alert alert-info" role="alert">
+      <h4 align="center">Научные симуляторы</h4>
+    </div>
+    <img src="{{url_for('static', filename='img/научные симуляторы.jpg')}}"
+               alt="здесь должна была быть картинка, но не нашлась">
+    {% elif page == 3 %}
+    <div class="alert alert-danger" role="alert">
+    <h4 align="center">Специальность не выбрана</h4>
+    </div>
+    {% endif %}
+
+    </body>
+</html>
